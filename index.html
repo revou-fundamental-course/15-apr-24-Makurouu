@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter by Rama Sankarshana</title>
+  <link rel="stylesheet" href="/css/style.css"> 
+</head>
+<body>
+  <main>
+    <header class="title-main">
+      <h1>Temperature Converter by Rama Sankarshana</h1>
+    </header>
+    <br>
+
+    <section class="Section-utama">
+      <section>
+        <p>Masukkan suhu derajat Celcius (°C)</p>
+      </section>
+
+      <article>
+        <header>
+          <p>Celcius (°C)</p>
+        </header>
+        <textarea name="" id="celsiusInput" cols="25" rows="3"></textarea>
+        <div>
+          <button id="button-convert">Convert</button>
+          <button id="button-reset">Reset</button>
+          <button id="button-reverse">Reverse</button>
+        </div>
+        <br>
+      </article>
+
+      <header class="Farenheit">
+        Farenheit (°F) :
+      </header>
+      <br>
+      <textarea name="" id="fahrenheitOutput" class="artikel" cols="25" rows="3" readonly></textarea>
+      <br><br>
+
+      <header>
+        Cara Kalkulasi :
+      </header>
+      <br>
+      <textarea name="" id="calculationArea" cols="25" rows="3" readonly></textarea>
+      <section>
+        <p>Cara Kalkulasi :</p>
+      </section>
+      <hr>
+      <p>
+      Dari celcius ke Farenheit dapat menggunakan rumus <br><br>
+      F = (°C x 9/5) + 32
+      </p>
+    </section>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>
