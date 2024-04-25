@@ -1,34 +1,23 @@
+document.getElementById("convertForm").addEventListener("submit", function(event) {
+  event.preventDefault();
 
-const celsiusInput = document.getElementById("celsiusInput");
-const fahrenheitOutput = document.getElementById("fahrenheitOutput");
-const calculationArea = document.getElementById("calculationArea");
+  const temperature = parseFloat(document.getElementById("temperature").value);
+  const unit = document.getElementById("unit").value;
 
-
-function convertToFahrenheit(celsius) {
-  const fahrenheit = (celsius * 9/5) + 32;
-  return fahrenheit.toFixed(2);
-}
-
-
-function updateCalculationText(celsius, fahrenheit) {
-  calculationArea.value = `Formula: °F = (°C x 9/5) + 32`;
-}
-
-
-document.getElementById("button-convert").addEventListener("click", function() {
-  const celsius = parseFloat(celsiusInput.value);
-  if (isNaN(celsius)) {
-    alert("Silahkan masukkan angka untuk suhu Celcius!");
-    return;
+  if (isNaN(temperature)) {
+      alert("Silahkan masukkan angka untuk suhu!");
+      return;
   }
 
-  const fahrenheit = convertToFahrenheit(celsius);
-  fahrenheitOutput.value = fahrenheit;
-  updateCalculationText(celsius, fahrenheit);
-});
+  let convertedTemp, explanation;
+  if (unit === "celsius") {
+      convertedTemp = (temperature * 9/5) + 32;
+      explanation = `${temperature}°C = ${convertedTemp.toFixed(2)}°F`;
+  } else {
+      convertedTemp = (temperature - 32) * 5/9;
+      explanation = `${temperature}°F = ${convertedTemp.toFixed(2)}°C`;
+  }
 
-document.getElementById("button-reset").addEventListener("click", function() {
-  celsiusInput.value = "";
-  fahrenheitOutput.value = "";
-  calculationArea.value = "";
+  document.getElementById("hasilKonversi").innerHTML = `Hasil Konversi: ${convertedTemp}`;
+  document.getElementById("explanation").innerHTML = explanation;
 });

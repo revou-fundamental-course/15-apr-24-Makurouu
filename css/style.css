@@ -1,60 +1,40 @@
-/* Ini file css */
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-main {
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 64px;
-    padding-bottom: 64px;
-}
-
-.title-main {
+    font-family: sans-serif;
     text-align: center;
 }
 
-header {
-    font-weight: bold;
+.calculator {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.Section-utama {
-    padding: 3px;
-    margin: 2px;
-    background-color: lightcyan;
-    padding: 10px;
-}
-
-.farenheit {
-    padding-top: 3px;
+input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
 button {
-    padding-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
     border: none;
-    padding: 5px;
-    margin-right: 5px;
-    margin-top: 8px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-#button-convert {
-    background-color: green;
-    color: white;
+#hasilKonversi {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
-#button-reset {
-    background-color: purple;
-    color: white;
-}
-
-#button-reverse {
-    background-color: blue;
-    color: white;
-}
-
-textarea {
-    resize: none;
-    border: none;
-    width: 100%;
+#explanation {
+    font-style: italic;
+    margin-top: 10px;
 }
